@@ -115,10 +115,10 @@
         */
 
       const changeUrls = function () {
-        document.querySelectorAll("a").forEach((link) => {
-          if (!link.closest("footer")) {
-            link.href = "https://www.google.com";
-          }
+        document.querySelectorAll("a:not(footer a)").forEach((link) => {
+          link.href = "https://www.google.com";
+          link.innerText = "vai a Google";
+          link.target = "_blank";
         });
       };
       changeUrls();
@@ -200,7 +200,7 @@
         let url = document.querySelector("footer");
 
         url.addEventListener("click", function () {
-          alert(document.querySelector("a").href);
+          alert(document.querySelector("footer a").href);
         });
       };
 
