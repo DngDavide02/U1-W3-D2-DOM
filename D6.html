@@ -84,7 +84,7 @@
 
       const changeTitle = function (newTitle) {
         let titleElement = document.querySelector("h1");
-        titleElement.textContent = newTitle;
+        titleElement.innerText = newTitle;
       };
 
       changeTitle("Questo è il nuovo titolo");
@@ -105,7 +105,7 @@
 
       const changePcontent = function (changeP) {
         let newDivP = document.querySelector("div p");
-        newDivP.textContent = changeP;
+        newDivP.innerText = changeP;
       };
 
       changePcontent("questo testo è stato cambiato tramite funzione");
